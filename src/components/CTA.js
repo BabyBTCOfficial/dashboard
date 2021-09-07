@@ -18,7 +18,7 @@ function CTA({ text, holdings, address, setAddress, tokenAddress }) {
       >
         <div className="flex items-center">
           <div className="flex justify-center">
-            <div className="relative md:mr-6 w-88 sm:w-96 mx-auto focus-within:text-black">
+            <div className="relative md:mr-6 w-88 sm:w-92 mx-auto focus-within:text-black">
               <div className="absolute inset-y-0 flex items-center pl-2">
                 <SearchIcon className="w-4 h-4" aria-hidden="true" />
               </div>
