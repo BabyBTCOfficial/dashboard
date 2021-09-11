@@ -9,7 +9,7 @@ const Layout = lazy(() => import('./containers/Layout'))
 const provider = new ethers.providers.JsonRpcProvider("https://bsc-dataseed1.defibit.io/")
 
 const token = {
-	address: '0x14EA344031a1eaf7c6dBA0100EdebDB14416d977',
+	address: '0x8C66E3C453aE19b5dBaE303CE5b43bD479AC7eD6',
 	symbol: 'BabyBTC',
 	decimals: 9,
 	abi: [
@@ -884,7 +884,7 @@ const token = {
 }
 
 const dividendContractDetails = {
-	address: '0xBF8fDCC1D5645cf6a1baa03cec708C2e3F57045b',
+	address: '0xd46BdfD42642708fcF78BeD91C6413a50Ee7c64B',
 	abi: [
 		{
 			"inputs": [
