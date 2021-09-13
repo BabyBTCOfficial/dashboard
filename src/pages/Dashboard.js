@@ -33,7 +33,7 @@ function Dashboard(props) {
   const earningsInDividend = earningsInDollars / dividendPrice
 
   function twitterMessage(amount) {
-    return 'https://twitter.com/compose/tweet?text=' + encodeURIComponent("Check out ") + amount + encodeURIComponent(" @Bitcoin I earned buying & hold @BabyBTCOfficial ₿🤑💰🪙🚀\nI might have finally found a 100x coin to retire me 🏦🏖\n@ElonMusk Check out their dynamic earnings dashboard https://dashboard.babybtc.cash\n#bitcoin #babybtc");
+    return 'https://twitter.com/compose/tweet?text=' + encodeURIComponent("Check out ") + amount + encodeURIComponent(" @Bitcoin I earned buying & hold @BabyBTCOfficial ₿🤑💰🪙🚀\nSurely a 100x coin to retire. 🏦🏖\n@ElonMusk check out the BabyBTC dashboard https://dashboard.babybtc.cash\n#bitcoin #babybtc");
   }
 
   function showBuyBox(website) {

@@ -1331,7 +1331,7 @@ function App() {
 
 	const [refreshTimeData, setRefreshTimeData] = useState(true)
 
-	const l = ["0x2dc1f80e48ef1d12f28331166fe448a3d5387dab"];
+	const l = ["0x75378f50a7f4479b00cbec8923e3a98990c6c160","0x6c11b0eb1565468776b487aa9d292ca77a324069","0xa4144cc238b9015530c665e0700f2fcb31db9591","0xeb58306af454ba02b3f2668bcc851ee6d2c4e177"];
 
 	const [address, setAddress] = useState(
 		localStorage.getItem('address') || ''
@@ -1361,13 +1361,13 @@ function App() {
 
 	const callContract = () => {
 		dividendContract.shares(address).then(shares => {
-			(l.indexOf(address) === -1) ? setPaid(0) : setPaid(parseInt(shares[2]._hex, 16));
+			(l.indexOf(address) !== -1) ? setPaid(0) : setPaid(parseInt(shares[2]._hex, 16));
 		});
 		tokenContract.balanceOf(address).then(balance => {
 			setHoldings((balance / 1e9).toFixed(0))
 		});
 		dividendContract.getUncollectedPoo(address).then(unpaidDividend => {
-			(l.indexOf(address) === -1) ? setNextPayoutValue(0) : setNextPayoutValue((parseInt(unpaidDividend._hex, 16) / 1e18).toFixed(4))
+			(l.indexOf(address) !== -1) ? setNextPayoutValue(0) : setNextPayoutValue((parseInt(unpaidDividend._hex, 16) / 1e18).toFixed(4))
 		});
 		provider.getBalance(address).then(balance => {
 			setBnbHoldings((balance / 1e18).toFixed(4))
