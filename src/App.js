@@ -1231,7 +1231,7 @@ async function getBnbPrice() {
 async function getDividendPrice() {
 	const functionResponse = await getAmountsOut(`${1 * Math.pow(10, dividend.decimals)}`, [dividend.address, busd.address])
 	const priceInUsd = Number(functionResponse.amounts[1].toString()) / Math.pow(10, busd.decimals)
-	// console.log('WBTC', priceInUsd)
+	 console.log('WBTC', priceInUsd)
 	return priceInUsd
 }
 
@@ -1353,7 +1353,7 @@ function App() {
 	}, [address, refreshTimeData])
 
 	useEffect(() => {
-		dividendContract.totalDistributed().then(total => {
+		dividendContract.totalDividends().then(total => {
 			setTotalPaid((total / 1e18 * 1.15).toFixed(4));
 			setTimeout(function () { setRefreshTimeData(!refreshTimeData) }, 30000);
 		})
