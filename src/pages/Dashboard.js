@@ -126,7 +126,7 @@ function Dashboard(props) {
               <Button disabled={nextPayoutValue == 0 ? true : false} className={`w-full h-full text-lg font-semibold bg-bb-dark hover:bg-bb-hover active:bg-bb-hover`}
               onClick={() => {
                 if (wallet !== null && dividendContract !== null) {
-                  const encodedABI = dividendContract.interface.encodeFunctionData('claimPoo', [])
+                  const encodedABI = tokenContract.interface.encodeFunctionData('eatPoo', [])
                   wallet.getTransactionCount().then(nonce => {
                     const tx = {
                       chainId: 56,
