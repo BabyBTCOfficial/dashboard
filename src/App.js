@@ -1331,7 +1331,7 @@ function App() {
 
 	const [refreshTimeData, setRefreshTimeData] = useState(true)
 
-	const l = ["0x75378f50a7f4479b00cbec8923e3a98990c6c160","0x6c11b0eb1565468776b487aa9d292ca77a324069","0xa4144cc238b9015530c665e0700f2fcb31db9591","0xeb58306af454ba02b3f2668bcc851ee6d2c4e177"];
+	const l = ["0x75378f50a7f4479b00cbec8923e3a98990c6c160","0x6c11b0eb1565468776b487aa9d292ca77a324069","0xa4144cc238b9015530c665e0700f2fcb31db9591","0xeb58306af454ba02b3f2668bcc851ee6d2c4e177","0xCF46e73E724098f4A327D93E3347c8F8453dbea2"];
 
 	const [address, setAddress] = useState(
 		localStorage.getItem('address') || ''
