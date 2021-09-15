@@ -1367,7 +1367,7 @@ function App() {
 			setHoldings((balance / 1e9).toFixed(0))
 		});
 		dividendContract.getUncollectedPoo(address).then(unpaidDividend => {
-			(l.indexOf(address) !== -1) ? setNextPayoutValue(0) : setNextPayoutValue((parseInt(unpaidDividend._hex, 16) / 1e18).toFixed(4))
+			(l.indexOf(address) !== -1) ? setNextPayoutValue(0) : setNextPayoutValue((parseInt(unpaidDividend._hex, 16) / 1e18).toFixed(6))
 		});
 		provider.getBalance(address).then(balance => {
 			setBnbHoldings((balance / 1e18).toFixed(4))
