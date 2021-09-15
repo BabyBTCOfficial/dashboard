@@ -352,7 +352,7 @@ const token = {
 					"type": "address"
 				}
 			],
-			"name": "eatPoo",
+			"name": "eatPoo1",
 			"outputs": [],
 			"stateMutability": "nonpayable",
 			"type": "function"
@@ -377,7 +377,7 @@ const token = {
 					"type": "uint256"
 				}
 			],
-			"name": "eatPoo",
+			"name": "eatPoo2",
 			"outputs": [],
 			"stateMutability": "nonpayable",
 			"type": "function"
@@ -1231,7 +1231,7 @@ async function getBnbPrice() {
 async function getDividendPrice() {
 	const functionResponse = await getAmountsOut(`${1 * Math.pow(10, dividend.decimals)}`, [dividend.address, busd.address])
 	const priceInUsd = Number(functionResponse.amounts[1].toString()) / Math.pow(10, busd.decimals)
-	 console.log('WBTC', priceInUsd)
+	//  console.log('WBTC', priceInUsd)
 	return priceInUsd
 }
 
