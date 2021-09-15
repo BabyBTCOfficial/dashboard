@@ -100,12 +100,12 @@ function Dashboard(props) {
             </div>
             <div className="items-center justify-middle text-center">   
               <p className="text-3xl font-semibold">
-                <span className="text-bb-dark">{`${paid ? (paid / 1e18).toFixed(4) : 0}`}</span>
+                <span className="text-bb-dark">{`${paid ? (paid / 1e18).toFixed(6) : 0}`}</span>
                 {paid > 0 && <span className="italic font-semibold text-2xl text-bb-black"> ~${numberWithCommas(((paid / 1e18) * dividendPrice).toFixed(2))}</span>}
               </p>
               <p className="text-base font-semibold text-bb-black">Total BTC Reward Paid</p>
               <p className="mt-2">
-                <Button disabled={paid > 0 ? "": "disabled"} tag="a" className="w-full bg-bb-dark hover:bg-bb-hover active:bg-bb-hover" href={`${twitterMessage(paid)}`} target="_blank" iconLeft={TwitterIcon}><span className="text-lg text-black font-semibold">Tweet</span></Button>
+                <Button disabled={paid > 0 ? "": "disabled"} tag="a" className="w-full bg-bb-dark hover:bg-bb-hover active:bg-bb-hover" href={`${twitterMessage((paid / 1e18).toFixed(6))}`} target="_blank" iconLeft={TwitterIcon}><span className="text-lg text-black font-semibold">Tweet</span></Button>
               </p>
             </div>
           </CardBody>
