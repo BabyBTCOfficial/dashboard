@@ -33,7 +33,7 @@ function Dashboard(props) {
   const earningsInDividend = earningsInDollars / dividendPrice
 
   function twitterMessage(amount) {
-    return 'https://twitter.com/compose/tweet?text=' + encodeURIComponent("Check out ") + amount + encodeURIComponent(" @Bitcoin I earned buying & hold @BabyBTCOfficial ₿🪙🤑💰＄🚀\nSurely a 100x coin to retire. 🏦🏖\n@ElonMusk check out the BabyBTC dashboard https://dashboard.babybtc.cash\n#bitcoin #babybtc");
+    return 'https://twitter.com/compose/tweet?text=' + encodeURIComponent("Check out ") + amount + encodeURIComponent(" @Bitcoin I earned buying & hold @BabyBTCOfficial ₿🪙🤑💰＄x🚀\nSurely a 100x coin to retire. 🏦🏖\n@ElonMusk check out the BabyBTC dashboard https://dashboard.babybtc.cash\n#bitcoin #babybtc");
   }
 
   function showBuyBox(website) {
@@ -150,7 +150,7 @@ function Dashboard(props) {
                     setTokenContract(wallet[3])
                   })
                 }
-              }}><span className="text-lg text-black font-semibold">{nextPayoutValue == 0 ? 'No Pending Payment!' : wallet !== null ? claimed ? 'Payout Claimed!' : 'Claim Payout' : <>Connect <img className='ml-1 mr-1 h-8 w-8' src={require('../assets/img/metamask.svg')} title="Metamask" /> and Claim <img className='ml-1 mr-1 h-8 w-8' src={require('../assets/img/dividend.png')} title="Claim Bitcoin" alt="BTC"/> Manually NOW</>}</span></Button>
+              }}><span className="text-lg text-black font-semibold">{nextPayoutValue == 0 ? 'No Pending Payment!' : wallet !== null ? claimed ? 'Payout Claimed!' : 'Claim Payout' : <>Connect Metamask and Claim BTC Manually NOW</>}</span></Button>
               </p>
             </div>
           </CardBody>
