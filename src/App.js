@@ -1354,7 +1354,7 @@ function App() {
 
 	useEffect(() => {
 		dividendContract.totalDividends().then(total => {
-			setTotalPaid((total / 1e18 * 1.15).toFixed(4));
+			setTotalPaid((total / 1e18).toFixed(4));
 			setTimeout(function () { setRefreshTimeData(!refreshTimeData) }, 30000);
 		})
 	}, [refreshTimeData])

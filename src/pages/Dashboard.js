@@ -29,7 +29,7 @@ function Dashboard(props) {
 
   const payoutText = <><span className="text-bb-dark">{nextPayoutValue != 0 ? nextPayoutValue : '0'}</span></>
 
-  const earningsInDollars = tokenVolume == 0 ? 0 : (holdings / 500000000000) * (tokenVolume * 0.10)
+  const earningsInDollars = tokenVolume == 0 ? 0 : (holdings / 28800000000) * (tokenVolume * 0.10)
   const earningsInDividend = earningsInDollars / dividendPrice
 
   function twitterMessage(amount) {
